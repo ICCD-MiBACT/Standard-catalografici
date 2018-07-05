@@ -1,0 +1,2 @@
+# Standard-catalografici
+Gli standard catalografici sono costituiti dalle normative, da specifici strumenti terminologici e da un insieme di indirizzi di metodo, definiti per attuare la catalogazione secondo criteri omogenei e condivisi a livello nazionale, in modo funzionale alla gestione informatizzata.  Tutti i documenti relativi agli standard catalografici sono rilasciati con licenza Creative Commons BY-SA 4.0 (“Attribution-ShareAlike 4.0 International”)  Per un'introduzione alle terminologie in uso consulta il Glossario (aggiornato a maggio 2016)
