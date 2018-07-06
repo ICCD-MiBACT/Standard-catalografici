@@ -2,7 +2,7 @@
 # Standard-catalografici
 Gli standard catalografici sono costituiti dalle normative, da specifici strumenti terminologici e da un insieme di indirizzi di metodo, definiti per attuare la catalogazione secondo criteri omogenei e condivisi a livello nazionale, in modo funzionale alla gestione informatizzata.  Tutti i documenti relativi agli standard catalografici sono rilasciati con licenza Creative Commons BY-SA 4.0 (“Attribution-ShareAlike 4.0 International”)  Per un'introduzione alle terminologie in uso consulta il Glossario (aggiornato a maggio 2016): http://iccd.beniculturali.it/getFile.php?id=5823
 
-GLi schemi XSD che si pubblicano in questo repository sono il frutto di una procedura di estrazione semi-automatica dal SIGECweb che ha richiesto alcuni interventi di "pulizia" manuale. Come tutti gli interventi manuali, anche questo può non essere esente da errori.
+Gli schemi XSD che si pubblicano in questo repository sono il frutto di una procedura di estrazione semi-automatica dal SIGECweb che ha richiesto alcuni interventi di "pulizia" manuale. Come tutti gli interventi manuali, anche questo può non essere esente da errori.
 Tuttavia, nella consapevolezza che questi schemi sono di importanza cruciale per chi sviluppa applicazioni e per chi produce e valida i dati affinchè essi siano importati nel SIGECweb, si sta procedendo alla loro progressiva pubblicazione. 
 Se riscontrate inesattezze o errori, segnalateceli. In ogni caso, l'unico riferimento ufficiale per gli standard catalografici resta http://www.iccd.beniculturali.it/index.php?it/473/standard-catalografici
 
