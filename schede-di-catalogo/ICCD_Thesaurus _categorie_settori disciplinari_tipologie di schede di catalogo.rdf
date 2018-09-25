@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:schema="http://schema.org/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:org="http://www.w3.org/ns/org#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:s-disc="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:prov="http://www.w3.org/ns/prov#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+	xmlns:euvoc="http://publications.europa.eu/ontology/euvoc#">
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<dc:date xml:lang="it">2018</dc:date>
+	<dc:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A33_CCBYSA30IT"/>
+	<dct:contributor xml:lang="it">Margherita Porena</dct:contributor><dct:contributor xml:lang="it">Chiara Veninata</dct:contributor>
+	<dct:creator xml:lang="it">Maria Letizia Mancinelli</dct:creator>
+	<dct:description xml:lang="it">Thesaurus delle categorie, settori disciplinari e tipologie di schede di catalogo
+</dct:description>
+	<dct:title xml:lang="it">Thesaurus delle categorie, settori disciplinari e tipologie di schede di catalogo
+</dct:title>
+	<owl:versionInfo xml:lang="it">1.0</owl:versionInfo>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/003"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:prefLabel xml:lang="en">Movable cultural properties</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni mobili</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:prefLabel xml:lang="en">Archeological heritage (movable)</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni archeologici (mobili)</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.001.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Reperti antropologici</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.001"/>
+	<skos:definition xml:lang="it">Testimonianze biologiche in relazione con contesti archeologici e paleontologici </skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">in corso costituzione GdL</skos:note>
+	<skos:note xml:lang="it">versione 3.01 - anno 2007</skos:note>
+	<skos:prefLabel xml:lang="en">Anthropological materials</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Reperti antropologici - AT</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.001.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Reperti archeologici</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.001"/>
+	<skos:definition xml:lang="it">Beni mobili di provenienza archeologica (gioielli e monili, vestimenti, arredi, elementi architettonici, opere di pittura, reperti archeobotanici e archeozoologici, scultura, strumenti e oggetti d’uso, ecc.)</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.00 - anno 2003</skos:note>
+	<skos:prefLabel xml:lang="en">Archeological objects</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Reperti archeologici - RA</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.001.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Tabella materiali archeologiciTabella materiali archeologiciTabella materiali archeologici</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.001"/>
+	<skos:definition xml:lang="it">Lotti di materiali di provenienza archeologica</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.00 - anno 2003</skos:note>
+	<skos:prefLabel xml:lang="en">Archeological materials table</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Tabella materiali archeologici - TMA</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:prefLabel xml:lang="en">Demo-etno-anthropological heritage (movable)</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni demoetnoantropologici (mobili)</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.002.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Beni demoetnoantropologici materiali</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.002"/>
+	<skos:definition xml:lang="it">Beni la cui costruzione e/o il cui uso sono strutturalmente associati a prassi socialmente condivise, trasmesse attraverso l’oralità e le tecniche corporali,tanto in ambito italiano quanto in ambito europeo ed extra-europeo (abbigliamento e ornamenti del corpo, arredi e suppellettili, mezzi di trasporto, ritualità, strumenti e accessori, beni sul territorio</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">rilasciata</skos:note>
+	<skos:note xml:lang="it">versione 2.00 - anno 2000</skos:note>
+	<skos:prefLabel xml:lang="en">Demo-etno-anthropological cultural properties (movable)</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni demoetnoantropologici materiali - BDM</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:prefLabel xml:lang="en">Photographic heritage</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni fotografici</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.003.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Fotografia</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.003"/>
+	<skos:definition xml:lang="it">Negativi, positivi, processi fotografici che danno origine a prodotti unici (dagherrotipi, ferrotipi, polaroid, chimigrammi, ecc.), fotografia digitale; elementi complessi come album, cartelle, fotomontaggi, panorami, porfolii.</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">rilasciata</skos:note>
+	<skos:note xml:lang="it">versione 3.00 - anno 2003</skos:note>
+	<skos:prefLabel xml:lang="en">Photography</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Fotografia - F</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.003.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Fondi fotografici</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.003"/>
+	<skos:definition xml:lang="it">Entità concettuali che si caratterizzano per l’accumulo di più unità fisiche omogenee o eterogenee dal punto di vista dei materiali che li compongono e che acquisiscono nella loro totalità valenza di bene culturale</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">rilasciata</skos:note>
+	<skos:prefLabel xml:lang="en">Photography collection</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Fondi fotografici - FF</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:prefLabel xml:lang="en">Music heritage</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni musicali</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.004.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Strumenti musicali</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.004"/>
+	<skos:definition xml:lang="it">Oggetti nati appositamente per produrre suoni organizzati secondo le diverse culture musicali, senza limiti spazio-temporali (strumenti e accessori di interesse archeologico, storico artistico, etnoantropologico)</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">rilasciata</skos:note>
+	<skos:prefLabel xml:lang="en">Musical instruments</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Strumenti musicali - SM</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.004.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Strumenti musicali-Organo</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.004"/>
+	<skos:definition xml:lang="it">Oggetto nato per produrre suoni,  costituito da una serie di canne metalliche,  di forma, lunghezza e diametro diversi, nelle quali viene immessa, per mezzo di un mantice o altro meccanismo, una quantità d’aria regolata da una o più tastiere e da una pedaliera (corredato da accessori), caratterizzato da specifici aspetti  morfologici-decorativi e fonico-strumentali (organo idraulico, organo positivo, organo portativo, organo elettronico ecc.)</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.01 - anno 2008</skos:note>
+	<skos:prefLabel xml:lang="en">Musical instruments - Organs</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Strumenti musicali-Organo - SMO</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:prefLabel xml:lang="en">Natural heritage</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni naturalistici</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Beni naturalistici-Botanica</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005"/>
+	<skos:definition xml:lang="it">Esemplari del mondo vegetale provenienti da collezioni di botanica  (raccolte di piante essiccate: erbari)  </skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.01 - anno 2007</skos:note>
+	<skos:prefLabel xml:lang="en">Natural cultural properties - Botany</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni naturalistici-Botanica - BNB</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Beni naturalistici-Mineralogia</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005"/>
+	<skos:definition xml:lang="it">Esemplari di minerali provenienti da collezioni di mineralogia (Augite, Goethite, scatola di quarzi ecc. )</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.01 - anno 2007</skos:note>
+	<skos:prefLabel xml:lang="en">Natural cultural properties - Mineralogy</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni naturalistici-Mineralogia - BNM</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Beni naturalistici-Paleontologia</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005"/>
+	<skos:definition xml:lang="it">Reperti fossili (animali, vegetali, ichnofossili, campioni e preparati per microscopio, ecc.)</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.01 - anno 2008</skos:note>
+	<skos:prefLabel xml:lang="en">Natural cultural properties - Paleontology</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni naturalistici-Paleontologia - BNP</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005.004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Beni naturalistici-Petrologia</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.01 - anno 2007</skos:note>
+	<skos:prefLabel xml:lang="en">Natural cultural properties - Petrology</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni naturalistici-Petrologia - BNPE</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005.005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Beni naturalistici-Planetologia</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005"/>
+	<skos:definition xml:lang="it">Esemplari di meteoriti provenienti da collezioni ( Aubrite, Ureilite, Eucrite   ecc.)</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.01 - anno 2007</skos:note>
+	<skos:prefLabel xml:lang="en">Natural cultural properties - Planetary science</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni naturalistici-Planetologia - BNPL</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005.006">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Beni naturalistici-Zoologia</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005"/>
+	<skos:definition xml:lang="it">Esemplari del mondo animale provenienti da collezioni di zoologia (ustiolo, toporagno, mammifero, artropode, scatola di farfalle, collezione elmintologica, ecc.)</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.01 - anno 2007</skos:note>
+	<skos:prefLabel xml:lang="en">Natural cultural properties - Zoology</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni naturalistici-Zoologia - BNZ</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.006">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:prefLabel xml:lang="en">Numismatic heritage</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni numismatici</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.006.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.006"/>
+	<skos:definition xml:lang="it">Monete e altri oggetti di interesse numismatico (reperti premonetali e paramonetali, conii e punzoni monetali, pesi per il controllo monetale, sigilli e medaglie), pertinenti a  qualsiasi epoca</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.00 - anno 2004</skos:note>
+	<skos:prefLabel xml:lang="en">Numismatic cultural properties</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni numismatici - NU</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.007">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:prefLabel xml:lang="en">Scientific and technological heritage</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni scientifici e tecnologici</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.007.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Patrimonio scientifico e tecnologico</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.007"/>
+	<skos:definition xml:lang="it">Strumenti di interesse per la storia della scienza e della tecnica (strumenti astronomici, di laboratorio, di misurazione ecc.) pertinenti a qualsiasi epoca e afferenti a specifiche discipline scientifiche ( apparecchio a specchi a piani rotanti, apparecchio per gli anelli colorati di Newton,  campana di  Savart,  orologio di Farina, orologio solare, pendola, sestante, telescopio ecc.);  macchine e macchinari, mezzi di trasporto ecc.</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">in sperimentazione</skos:note>
+	<skos:note xml:lang="it">versione 3.01 - anno 2005</skos:note>
+	<skos:prefLabel xml:lang="en">Scientific and technological cultural propeties</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Patrimonio scientifico e tecnologico - PST</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:prefLabel xml:lang="en">Historic and artistic heritage</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni storici e artistici</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Disegni</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008"/>
+	<skos:definition xml:lang="it">Opere fatte a mano su qualsiasi supporto (carta, cartoncino, cartone, intonaco, legno, pergamena, pietra, seta, tavola, tela ecc.) e con particolari strumenti (carboncino, gessetto, inchiostro, lapis, matita, pastello, penna ecc.) e specifiche tecniche (acquarellatura, sanguigna ecc.).</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">in elaborazione</skos:note>
+	<skos:note xml:lang="it">versione 3.00 - anno 2003</skos:note>
+	<skos:prefLabel xml:lang="en">Drawings</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Disegni - D</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Matrici incise</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008"/>
+	<skos:definition xml:lang="it">Lastre di vario materiale (acciaio, legno, linoleum, ottone, pietra, zinco rame ecc.) su cui vengono tracciate rappresentazioni pittoriche con particolari strumenti (bulino, punte di acciaio o di diamante, punzoni, raschietti ecc.) e con specifiche tecniche di incisione (acquaforte, acquatinta, litografia, mezzatinta, serigrafia, silografia, zincografia ecc.)</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.00 - anno 2003</skos:note>
+	<skos:prefLabel xml:lang="en">Printing plates</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Matrici incise - MI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Opere/oggetti d’arte</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008"/>
+	<skos:definition xml:lang="it">Beni mobili costituenti parte integrante di monumenti artistici e storici o provenienti dallo smembramento dei monumenti stessi, conservati in collezioni, musei e pinacoteche (armi ed armature, arredi civili e religiosi, oggetti per il culto, oggetti d’uso, opere di pittura, tessuti e arazzi, sulture, ecc.).</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">in elaborazione</skos:note>
+	<skos:note xml:lang="it">versione 3.00 - anno 2003</skos:note>
+	<skos:prefLabel xml:lang="en">Artworks/objects</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Opere/oggetti d’arte - OA</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008.004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Opere/oggetti d’arte contemporanea</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008"/>
+	<skos:definition xml:lang="it">Opere rappresentative  delle nuove correnti artistiche dei secc. XX e  XXI (assemblaggio, computer art, istallazione, istallazione ambientale, istallazione audio, istallazione video, istallazione multimediale interattiva, opera cinetico-visuale, performance, ready made, realtà virtuale, video arte ecc.)</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">in elaborazione</skos:note>
+	<skos:note xml:lang="it">versione 3.00 - anno 2004</skos:note>
+	<skos:prefLabel xml:lang="en">Contemporary artworks/objects</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Opere/oggetti d’arte contemporanea - OAC</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008.005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Stampe</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008"/>
+	<skos:definition xml:lang="it">Esemplari prodotti dall’operazione mediante la quale da una matrice di incisione si ottengono copie uguali di rappresentazioni pittoriche su carta, cartoncino, cuoio,  pergamena, seta ecc. con varie tecniche di incisione (acquaforte, acquatinta, litografia, zincografia ecc.)</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.00 - anno 2003</skos:note>
+	<skos:prefLabel xml:lang="en">Prints</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Stampe - S</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008.006">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Vestimenti antichi/contemporanei</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008"/>
+	<skos:definition xml:lang="it">Abiti e costumi riguardanti l’abbigliamento maschile, femminile e infantile ad uso civile, connessi alle principali finalità d’uso e alle diverse occasioni della vita privata e sociale,  secondo le tipologie storiche dei secoli XVIII, XIX, XX  (abiti, biancheria intima, calzetteria, calzoni, camicie, costumi, cuffie, gonne, giacche, grembiuli, livree, maglie, mantelli, scialli, sciarpe, veli ecc.).</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.01 - anno 2010</skos:note>
+	<skos:prefLabel xml:lang="en">Historic and contemporary garments</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Vestimenti antichi/contemporanei - VeAC</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:prefLabel xml:lang="en">Immovable cultural properties</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni immobili</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:prefLabel xml:lang="en">Archeological heritage (immovable)</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni archeologici (immobili)</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Complessi archeologici</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001"/>
+	<skos:definition xml:lang="it">Complessi monumentali costituiti da più unità edilizie (abitati, centri fortificati, santuari, complessi termali, ecc.), catalogati a prescindere dal loro attuale stato di conservazione.</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.00 - anno 2003</skos:note>
+	<skos:prefLabel xml:lang="en">Archeological complexes</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Complessi archeologici - CA</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Monumenti archeologici</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001"/>
+	<skos:definition xml:lang="it">Singole unità edilizie (una torre, una domus, un tempio, ecc.) catalogate a prescindere dal loro attuale stato di conservazione</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.00 - anno 2003</skos:note>
+	<skos:prefLabel xml:lang="en">Archeological monuments</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Monumenti archeologici - MA</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Saggi stratigrafici</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001"/>
+	<skos:definition xml:lang="it">Sequenze stratigrafiche rinvenute in contesti di scavo archeologico</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.00 - anno 2003</skos:note>
+	<skos:prefLabel xml:lang="en">Stratigraphic records</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Saggi stratigrafici - SAS</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001.004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Siti archeologici</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001"/>
+	<skos:definition xml:lang="it">Porzioni di territorio che conservano testimonianze archeologiche</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.00 - anno 2003</skos:note>
+	<skos:prefLabel xml:lang="en">Archeological sites</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Siti archeologici - SI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:prefLabel xml:lang="en">Architectural and landscape heritage</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni architettonici e paesaggistici</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.002.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Architettura</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.002"/>
+	<skos:definition xml:lang="it">Complessi monumentali, edifici pubblici e di culto, dimore gentilizie, architetture fortificate, edifici privati, edilizia rurale, fabbricati di archeologia industriale caratterizzati da particolare rilevanza storico artistica</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.00 - anno 2003</skos:note>
+	<skos:prefLabel xml:lang="en">Architecture</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Architettura - A</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.002.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Centri/nuclei storici</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.002"/>
+	<skos:definition xml:lang="it">Strutture insediative urbane più antiche dei territori comunali, caratterizzate da testimonianze storico artistiche di particolare rilevanza</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">in elaborazione</skos:note>
+	<skos:prefLabel xml:lang="en">Historic city/town centres</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Centri/nuclei storici - CNS</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.002.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Parchi/giardini</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.002"/>
+	<skos:definition xml:lang="it">Spazi verdi di particolare rilevanza  storica, artistica e ambientale. Esempi di questa tipologia di beni culturali sono i giardini e i parchi annessi alle proprietà nobiliari, gli orti e i giardini botanici, i parchi urbani, le aree verdi comprese nei siti archeologici, ma anche i piccoli giardini privati, i chiostri e i cortili, i cimiteri, sempre se caratterizzati da particolare rilevanza storico artistica.</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">versione 3.00 - anno 2003</skos:note>
+	<skos:prefLabel xml:lang="en">Parks/gardens</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Parchi/giardini - PG</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:prefLabel xml:lang="en">Intangible cultural properties</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni immateriali</skos:prefLabel>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/003.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/003"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:prefLabel xml:lang="en">Demo-etno-anthropological heritage (intangible)</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni demoetnoantropologici (immateriali)</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/003.001.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:altLabel xml:lang="it">Beni demoetnoantropologici immateriali</skos:altLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/003.001"/>
+	<skos:definition xml:lang="it">Beni consistenti in performance uniche e irrepetibili strutturalmente connesse al territorio e a prassi socialmente condivise trasmesse attraverso l’oralità e le tecniche corporali, tanto in ambito italiano quanto in ambito europeo ed extra-europeo (comunicazioni non verbali, danze, feste e cerimonie, giochi, letterature orali, musiche, norme consuetudinarie, rappresentazioni e spettacoli, saperi, tecniche)</skos:definition>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/"/>
+	<skos:note xml:lang="it">rilasciata</skos:note>
+	<skos:note xml:lang="it">versione 3.01 - anno 2006</skos:note>
+	<skos:prefLabel xml:lang="en">Demo-etno-anthropological cultural properties (intangible)</skos:prefLabel>
+	<skos:prefLabel xml:lang="it">Beni demoetnoantropologici immateriali - BDI</skos:prefLabel>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001">
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.003"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.004"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.006"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.007"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.001">
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.001.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.001.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.001.003"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.002">
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.002.001"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.003">
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.003.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.003.002"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.004">
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.004.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.004.002"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005">
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005.003"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005.004"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005.005"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.005.006"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.006">
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.006.001"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.007">
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.007.001"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008">
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008.003"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008.004"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008.005"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/001.008.006"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002">
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.002"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001">
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001.003"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.001.004"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.002">
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.002.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.002.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/002.002.003"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/003">
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/003.001"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/003.001">
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/settori_disciplinari/def/003.001.001"/>
+</rdf:Description>
+
+</rdf:RDF>
