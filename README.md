@@ -427,7 +427,7 @@ Le **normative di versione 2.00** (elencate nella tabella di seguito), sono anco
 
 
 
-Le **normative di versione 3.00 e 3.01 **(nelle due tabelle che seguono) costituiscono l'apparato di schede ad oggi più completo ed aggiornato:
+Le **normative di versione 3.00 e 3.01** (nelle due tabelle che seguono) costituiscono l'apparato di schede ad oggi più completo ed aggiornato:
 
 
 <table>
