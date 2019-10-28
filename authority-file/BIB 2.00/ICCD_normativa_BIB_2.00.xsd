@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+   <!-- =============== INIZIO ELEMENTI PER LA VALIDAZIONE DEI FILE DI IMPORT/EXPORT ==================-->
+   <!-- =============== per validare la singola scheda, eliminare dal file XSD questa parte iniziale racchiusa tra i commenti==================-->
+   <xs:element name="schede">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="scheda" maxOccurs="unbounded"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="csm_root">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="csm_info"/>
+            <xs:element ref="schede"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="csm_info">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="nome_normativa" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="tipo" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="ver_numero" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="data_crea" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="ente_schedatore" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="concessione" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="spedizione" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="note" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="numero_schede" minOccurs="1" maxOccurs="1"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="note">
+      <xs:complexType/>
+   </xs:element>
+   <xs:element name="tipo">
+      <xs:simpleType>
+         <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="data_crea">
+      <xs:simpleType>
+         <xs:restriction base="xs:decimal"/>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="spedizione">
+      <xs:complexType/>
+   </xs:element>
+   <xs:element name="ver_numero">
+      <xs:simpleType>
+         <xs:restriction base="xs:decimal"/>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="concessione">
+      <xs:complexType/>
+   </xs:element>
+   <xs:element name="numero_schede">
+      <xs:simpleType>
+         <xs:restriction base="xs:decimal"/>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="nome_normativa">
+      <xs:simpleType>
+         <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="ente_schedatore">
+      <xs:simpleType>
+         <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+   </xs:element>
+   <!-- =============== FINE ELEMENTI PER LA VALIDAZIONE DEI FILE DI IMPORT/EXPORT ==================-->
+   <xs:element name="scheda" id="tag_normativa">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="CD" id="paragrafo_CD" minOccurs="1" maxOccurs="1">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="TSK" id="camposemplice_BIB_CD_TSK" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Tipo scheda"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,5"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                 <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_TSK_BIB"/>
+                                 <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="NCU" id="camposemplice_BIB_CD_NCU" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Codice univoco ICCD"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,8"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="ESC" id="camposemplice_BIB_CD_ESC" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Ente schedatore"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="ECP" id="camposemplice_BIB_CD_ECP" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Ente competente"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="alias" type="xs:string" use="optional" fixed="CODICI"/>
+                  <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="BI" id="paragrafo_BI" minOccurs="1" maxOccurs="1">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="BIB" id="campostrutturato_BI_BIB" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="BIBA" id="camposemplice_BI_BIB_BIBA" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Autore"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBC" id="camposemplice_BI_BIB_BIBC" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Curatore"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,70"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBF" id="camposemplice_BI_BIB_BIBF" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Tipo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VA_BIBF_BIB"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBG" id="camposemplice_BI_BIB_BIBG" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Titolo libro o rivista"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBT" id="camposemplice_BI_BIB_BIBT" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Titolo contributo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBL" id="camposemplice_BI_BIB_BIBL" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Luogo di edizione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,50"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBZ" id="camposemplice_BI_BIB_BIBZ" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Editore"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,50"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBD" id="camposemplice_BI_BIB_BIBD" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Anno di edizione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,10"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBE" id="camposemplice_BI_BIB_BIBE" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Numero di edizione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,70"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBS" id="camposemplice_BI_BIB_BIBS" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Specifiche"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBV" id="camposemplice_BI_BIB_BIBV" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Volume"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBP" id="camposemplice_BI_BIB_BIBP" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Pagine/numero catalogo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBH" id="camposemplice_BI_BIB_BIBH" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Sigla per citazione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,8"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="node_idSpecial" type="xs:string" use="optional" fixed="true"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="BIBLIOGRAFIA"/>
+                           <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="alias" type="xs:string" use="optional" fixed="BIBLIOGRAFIA"/>
+                  <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>
+<!--normativa#BIB#2.00#ICCD0#Bibliografia#1#null#false#false#null#null#null#true-->
