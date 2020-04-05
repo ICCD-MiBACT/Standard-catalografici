@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:schema="http://schema.org/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:org="http://www.w3.org/ns/org#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:qb="http://purl.org/linked-data/cube#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:ff-ogtd_ogtt="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"
+	xmlns:dcat="http://www.w3.org/ns/dcat#"
+	xmlns:prov="http://www.w3.org/ns/prov#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+	xmlns:euvoc="http://publications.europa.eu/ontology/euvoc#">
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<dct:title xml:lang="it">Thesaurus per la definizione del fondo fotografico</dct:title>
+	<dct:description xml:lang="it">Strumenti terminologici. Scheda FF - Fondi fotografici. Thesaurus per la definizione del bene. Versione dicembre 2020</dct:description>
+	<dct:creator xml:lang="it">ICCD - Istituto Centrale per il catalogo e la documentazione</dct:creator>
+	<dct:contributor xml:lang="it">Margherita Porena</dct:contributor>
+	<owl:versionInfo xml:lang="it">aprile 2020</owl:versionInfo>
+	<dc:date xml:lang="it">aprile 2020</dc:date>
+	<dc:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A33_CCBYSA30IT"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">accumulo</skos:prefLabel>
+	<skos:definition xml:lang="it">insieme complesso di fototipi, con o senza  documenti ad essi connessi, che presenta un qualche carattere di unitarietà  e che, per ragioni e pratiche istituzionali e di sedimentazione, nonostante accomunato da un punto di origine del processo di sedimentazione, risulti  un intreccio tale da non consentire di ricondurre i fototipi ai rispettivi soggetti produttori, ma solo in parte a essi, o che consenta di ricondurre i fototipi ai soli autori delle immagini fotografiche</skos:definition>
+	<rdfs:label xml:lang="it">accumulo</rdfs:label>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001.003"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001.004"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001.005"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">accumulo aziendale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001"/>
+	<rdfs:label xml:lang="it">aziendale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">accumulo familiare</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001"/>
+	<rdfs:label xml:lang="it">familiare</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">accumulo istituzionale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001"/>
+	<rdfs:label xml:lang="it">istituzionale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001.004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">accumulo personale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001"/>
+	<rdfs:label xml:lang="it">personale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001.005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">accumulo professionale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/001"/>
+	<rdfs:label xml:lang="it">professionale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">archivio</skos:prefLabel>
+	<skos:definition xml:lang="it">insieme organico di fototipi, con o senza documenti ad essi connessi, formato e/o sedimentato e usato da una determinata persona, famiglia o ente nello svolgimento della propria attività personale, professionale, familiare o istituzionale</skos:definition>
+	<rdfs:label xml:lang="it">archivio</rdfs:label>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002.003"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002.004"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002.005"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">archivio aziendale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002"/>
+	<rdfs:label xml:lang="it">aziendale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">archivio familiare</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002"/>
+	<rdfs:label xml:lang="it">familiare</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">archivio istituzionale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002"/>
+	<rdfs:label xml:lang="it">istituzionale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002.004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">archivio personale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002"/>
+	<rdfs:label xml:lang="it">personale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002.005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">archivio professionale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/002"/>
+	<rdfs:label xml:lang="it">professionale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">collezione</skos:prefLabel>
+	<skos:definition xml:lang="it">insieme organico di fototipi, con o senza documenti ad essi connessi, informato da un progetto selettivo storico-fotografico, artistico, iconografico o tipologico strettamente legato alla intenzionalità della persona o ente produttore e creato in un arco temporale  definito. Si distingue per la precisa progettualità, per la focalizzazione su una precisa tipologia o soggetto, che assicurano omogeneità all'insieme rispetto ad un criterio dato, all'azione di ordinamento e classificazione operata dal collezionista, ovvero dal soggetto produttore del fondo</skos:definition>
+	<rdfs:label xml:lang="it">collezione</rdfs:label>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003.003"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003.004"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003.005"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">collezione aziendale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003"/>
+	<rdfs:label xml:lang="it">aziendale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">collezione familiare</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003"/>
+	<rdfs:label xml:lang="it">familiare</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">collezione istituzionale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003"/>
+	<rdfs:label xml:lang="it">istituzionale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003.004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">collezione personale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003"/>
+	<rdfs:label xml:lang="it">personale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003.005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">collezione professionale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/003"/>
+	<rdfs:label xml:lang="it">professionale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">complesso di fondi</skos:prefLabel>
+	<skos:definition xml:lang="it">fondo costituito da una pluralitÃ  di fondi, i quali presentano tra loro un legame genetico o istituzionale o che comunque a un certo punto della loro storia sedimentale sono stati conservati  da un medesimo soggetto produttore</skos:definition>
+	<rdfs:label xml:lang="it">complesso di fondi</rdfs:label>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004.003"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004.004"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004.005"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">complesso di fondi aziendale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004"/>
+	<rdfs:label xml:lang="it">aziendale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">complesso di fondi familiare</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004"/>
+	<rdfs:label xml:lang="it">familiare</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">complesso di fondi istituzionale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004"/>
+	<rdfs:label xml:lang="it">istituzionale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004.004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">complesso di fondi personale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004"/>
+	<rdfs:label xml:lang="it">personale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004.005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">complesso di fondi professionale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/004"/>
+	<rdfs:label xml:lang="it">professionale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">diateca</skos:prefLabel>
+	<skos:definition xml:lang="it">composta esclusivamente da diapositivi anche di vario formato, non necessariamente prodotta dal medesimo soggetto che la detiene, ma da questo sedimentata, conservata per motivazioni culturali varie, per lo più tematiche (tra queste la documentazione storico artistica, ma anche materiali di letterati, architetti, etc.). è comune anche l'interpretazione di diateca come servizio interno a un istituto. Il legame degli oggetti è in qualche modo più esterno alla loro natura e storia e così il loro ordinamento</skos:definition>
+	<rdfs:label xml:lang="it">diateca</rdfs:label>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005.003"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005.004"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005.005"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">diateca  aziendale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005"/>
+	<rdfs:label xml:lang="it">aziendale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">diateca  familiare</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005"/>
+	<rdfs:label xml:lang="it">familiare</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">diateca  istituzionale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005"/>
+	<rdfs:label xml:lang="it">istituzionale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005.004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">diateca  personale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005"/>
+	<rdfs:label xml:lang="it">personale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005.005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">diateca  professionale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/005"/>
+	<rdfs:label xml:lang="it">professionale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">fototeca</skos:prefLabel>
+	<skos:definition xml:lang="it">composta da materiali morfologicamente eterogenei, non necessariamente prodotta dal medesimo soggetto che la detiene, ma da questo sedimentata, conservata per motivazioni culturali varie, per lo più tematiche (tra queste la documentazione storico artistica, ma anche materiali di letterati, architetti, etc.). è comune anche l'interpretazione di fototeca come servizio interno a un istituto. Il legame degli oggetti è in qualche modo più esterno alla loro natura e storia e così il loro ordinamento</skos:definition>
+	<rdfs:label xml:lang="it">fototeca</rdfs:label>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006.003"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006.004"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006.005"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">fototeca aziendale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006"/>
+	<rdfs:label xml:lang="it">aziendale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">fototeca familiare</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006"/>
+	<rdfs:label xml:lang="it">familiare</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">fototeca istituzionale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006"/>
+	<rdfs:label xml:lang="it">istituzionale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006.004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">fototeca personale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006"/>
+	<rdfs:label xml:lang="it">personale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006.005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">fototeca professionale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/006"/>
+	<rdfs:label xml:lang="it">professionale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">raccolta</skos:prefLabel>
+	<skos:definition xml:lang="it">può coincidere con la collezione, ma l'uso comune allude ad una minore determinazione e precisione selettiva, ad una maggiore casualità dell'accumulo e della conservazione e eterogeneità (morfologica, storica, tematica, etc.) dei materiali. Appare legata in misura minore alla intenzionalità della persona o ente produttore, può avere o meno distinti perimetri tipologici e cronologici</skos:definition>
+	<rdfs:label xml:lang="it">raccolta</rdfs:label>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007.001"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007.002"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007.003"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007.004"/>
+	<skos:narrower rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007.005"/>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007.001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">raccolta aziendale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007"/>
+	<rdfs:label xml:lang="it">aziendale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007.002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">raccolta familiare</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007"/>
+	<rdfs:label xml:lang="it">familiare</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007.003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">raccolta istituzionale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007"/>
+	<rdfs:label xml:lang="it">istituzionale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007.004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">raccolta personale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007"/>
+	<rdfs:label xml:lang="it">personale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007.005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">raccolta professionale</skos:prefLabel>
+	<skos:broader rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/007"/>
+	<rdfs:label xml:lang="it">professionale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/fondi_fotografici_definizione/def/"/>
+</rdf:Description>
+
+</rdf:RDF>

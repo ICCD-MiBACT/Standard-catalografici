@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:schema="http://schema.org/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:org="http://www.w3.org/ns/org#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:qb="http://purl.org/linked-data/cube#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:ff-ogto="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"
+	xmlns:dcat="http://www.w3.org/ns/dcat#"
+	xmlns:prov="http://www.w3.org/ns/prov#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+	xmlns:euvoc="http://publications.europa.eu/ontology/euvoc#">
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+	<dct:title xml:lang="it">Thesaurus per l'ordinamento dei materiali collegati al fondo fotografico</dct:title>
+	<dct:description xml:lang="it">Strumenti terminologici. Scheda FF - Fondi fotografici. Thesaurus per l'ordinamento dei materiali collegati al bene. Versione aprile 2020</dct:description>
+	<dct:creator xml:lang="it">Istituto centrale per il catalogo e la documentazione</dct:creator>
+	<dct:contributor xml:lang="it">Margherita Porena</dct:contributor>
+	<dct:publisher xml:lang="it">Istituto centrale per il catalogo e la documentazione</dct:publisher>
+	<owl:versionInfo xml:lang="it">aprile 2020</owl:versionInfo>
+	<dc:date xml:lang="it">aprile 2020</dc:date>
+	<dc:license rdf:resource="https://w3id.org/italia/controlled-vocabulary/licences/A33_CCBYSA30IT"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/001"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/002"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/003"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/004"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/005"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/006"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/007"/>
+	<skos:hasTopConcept rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/008"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/001">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">ordinamento alfabetico</skos:prefLabel>
+	<rdfs:label xml:lang="it">alfabetico</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/002">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">ordinamento cronologico</skos:prefLabel>
+	<rdfs:label xml:lang="it">cronologico</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/003">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">ordinamento misto</skos:prefLabel>
+	<rdfs:label xml:lang="it">misto</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/004">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">ordinamento numerico</skos:prefLabel>
+	<rdfs:label xml:lang="it">numerico</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/005">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">ordinamento storico o originale</skos:prefLabel>
+	<rdfs:label xml:lang="it">storico o originale</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/006">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">ordinamento tematico</skos:prefLabel>
+	<rdfs:label xml:lang="it">tematico</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/007">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">ordinamento topografico</skos:prefLabel>
+	<rdfs:label xml:lang="it">topografico</rdfs:label>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/008">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="it">ordinamento non rilevato</skos:prefLabel>
+	<rdfs:label xml:lang="it">NR</rdfs:label>
+	<skos:altLabel xml:lang="it">non rilevato</skos:altLabel>
+	<skos:inScheme rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+	<skos:topConceptOf rdf:resource="http://dati.beniculturali.it/vocabularies/ordinamento_materiali_fondo_fotografico/def/"/>
+</rdf:Description>
+
+</rdf:RDF>
