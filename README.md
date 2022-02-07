@@ -1,27 +1,84 @@
 
-# Standard-catalografici
-Gli standard catalografici sono costituiti dalle normative, da specifici strumenti terminologici e da un insieme di indirizzi di metodo, definiti per attuare la catalogazione secondo criteri omogenei e condivisi a livello nazionale, in modo funzionale alla gestione informatizzata.  Tutti i documenti relativi agli standard catalografici sono rilasciati con licenza Creative Commons BY-SA 4.0 (“Attribution-ShareAlike 4.0 International”)  Per un'introduzione alle terminologie in uso consulta il Glossario (aggiornato a maggio 2016): http://iccd.beniculturali.it/getFile.php?id=5823
+**NORMATIVE PER LA CATALOGAZIONE: CRITERI DI ORDINAMENTO**
 
-Gli schemi XSD che si pubblicano in questo repository sono il frutto di una procedura di estrazione semi-automatica dal SIGECweb che ha richiesto alcuni interventi di "pulizia" manuale. Come tutti gli interventi manuali, anche questo può non essere esente da errori.
-Tuttavia, nella consapevolezza che questi schemi sono di importanza cruciale per chi sviluppa applicazioni e per chi produce e valida i dati affinchè essi siano importati nel SIGECweb, si sta procedendo alla loro progressiva pubblicazione. 
+I modelli standard per la registrazione dei dati (normative) rilasciati dall’ICCD e disponibili nel SIGECweb sono organizzati in quattro tipologie, ognuna delle quali svolge un diverso ruolo nel sistema della catalogazione (http://www.iccd.beniculturali.it/it/normative).
 Se riscontrate inesattezze o errori, segnalateceli. In ogni caso, l'unico riferimento ufficiale per gli standard catalografici resta http://www.iccd.beniculturali.it/index.php?it/473/standard-catalografici
 
+(aggiornato a febbraio 2022)
 
 
 
-**_NORMATIVE PER LA CATALOGAZIONE: QUADRO DI RIEPILOGO_**
-(aggiornato a giugno 2018)
+**SCHEDE DI CATALOGO**
 
-Per quanto riguarda i modelli catalografici rilasciati dall'ICCD e disponibili nel SIGECweb per le attività di catalogazione, si prospetta di seguito un quadro di riepilogo generale.
-
-
-
-*   **SCHEDE DI CATALOGO**
-
-Modelli che raccolgono in modo formalizzato le informazioni sui beni culturali (dati descrittivi, tecnico-scientifici, geografici, documentali); sono contraddistinti dalla presenza del codice univoco "NCT", che individua ciascun bene a livello nazionale e costituisce il punto di riferimento di tutto il processo di catalogazione.
+Modelli che raccolgono in modo formalizzato le informazioni sui beni culturali (dati descrittivi, tecnico-scientifici, geografici, documentali, amministrativi); sono contraddistinti dalla presenza del codice univoco “NCT”, che individua ciascun bene catalogato a livello nazionale e rappresenta il punto di riferimento dell’intero processo di produzione, verifica, aggiornamento, interscambio, pubblicazione e diffusione dei dati.
+L'ICCD ha emanato modelli catalografici diversi, in relazione alle differenti tipologie di beni, organizzati sulla base dei vari settori disciplinari (vedi avanti). 
 
 
-Ad oggi l'ICCD ha definito 30 tracciati catalografici, in relazione alle differenti tipologie di beni, che fanno riferimento a nove settori disciplinari:
+
+**SCHEDE PER GLI AUTHORITY FILE**
+
+Modelli per l’acquisizione delle informazioni che riguardano entità in stretta relazione con i beni culturali e con la loro storia nel corso del tempo: gli autori o altri soggetti cui fanno capo precise responsabilità (sia singole persone sia enti collettivi); la bibliografia di riferimento; gli eventi (campagne di scavo e di ricognizione archeologica o altri eventi culturali, come mostre, rappresentazioni, ecc.).
+Queste schede vengono utilizzate per registrare i dati in modo omogeneo e standardizzato, così da costituire degli archivi autoconsistenti di riferimento, gli Authority file, al servizio del processo di conoscenza del patrimonio, utili per fornire punti di accesso per la gestione e la consultazione delle informazioni.
+Nel processo di catalogazione sono attualmente in uso le schede di Authority file: AUT - Archivio controllato dei nomi: persone e enti; BIB - Bibliografia; DSC - Scavi archeologici; RCG - Ricognizioni archeologiche; EVE - Eventi culturali (in corso di sperimentazione).
+
+
+**SCHEDE PER I CONTENITORI**
+
+Modelli per l’acquisizione delle informazioni che riguardano i luoghi dove sono collocati e conservati beni culturali: questi luoghi nel linguaggio catalografico vengono definiti "contenitori" e rappresentano sul territorio "nodi di aggregazione" di beni (in particolare di beni mobili).
+L'ICCD ha individuato ad oggi due diverse tipologie di contenitori: 
+
+il **contenitore fisico**, definizione convenzionale che indica il luogo fisico dove si trova un bene o un insieme di beni (un edificio, un complesso architettonico o uno spazio territoriale: un palazzo, una chiesa, un monumento archeologico, un giardino storico, un deposito, un sito archeologico, ecc.);
+
+il **contenitore giuridico**, definizione convenzionale che indica la struttura conservativa giuridicamente riconosciuta nella quale è collocato un bene o un insieme di beni (museo, galleria, pinacoteca, parco archeologico, archivio, raccolta privata, ecc.).
+
+In relazione a queste due tipologie sono state elaborate due distinte normative: la scheda CF per Contenitori fisici e la scheda CG per i Contenitori giuridici.
+
+
+**MODULI**
+
+Modelli per la registrazione standardizzata di informazioni in occasione di attività di censimento, di inventariazione patrimoniale, di approfondimento specialistico. Possono essere prodotti anche fuori dai rigorosi flussi di lavoro propri della catalogazione: non sono associati ad un codice univoco nazionale NCT, ma sono comunque contrassegnati da un codice identificativo, grazie al quale vengono gestiti nel sistema del catalogo e, quando utile, collegati ad altri standard ICCD (ad es. le schede di catalogo).
+Nel sistema degli standard sono attualmente in uso: il MODI - Modulo informativo (per segnalazioni e censimenti di entità mobili, immobili e immateriali); il MINP - Modulo per l’inventariazione patrimoniale dei beni archeologici; il MOEP - Modulo per l’epigrafia (strumento di approfondimento specialistico, in corso di sperimentazione); il MOPR - Modulo progetto e il MOSI - Modulo Area/sito, da applicare nelle indagini di archeologia preventiva (in corso di sperimentazione).
+
+
+                                                           *   *   *
+
+Per quanto riguarda in particolare le SCHEDE DI CATALOGO, gli strumenti più noti e utilizzati fra gli standard ICCD, che hanno un ruolo “centrale” nel processo di conoscenza del patrimonio culturale, sono stati adottati i seguenti criteri di organizzazione.
+
+**AMBITI DI TUTELA MiC**
+
+sono gli ambiti di tutela previsti dall’attuale organizzazione del Ministero della cultura in cui vengono utilizzati gli standard ICCD per la catalogazione:
+archeologico
+architettonico e paesaggistico
+demoetnoantropologico
+storico artistico
+
+**CATEGORIE**
+
+in relazione ai tipi di beni descritti, le schede di catalogo sono raggruppate in:
+BENI MOBILI
+BENI IMMOBILI
+BENI IMMATERIALI
+
+**SETTORI DISCIPLINARI**
+
+le tipologie di schede disponibili per la catalogazione dei beni culturali sono organizzate in base ai diversi settori disciplinari a cui afferiscono; ad oggi ne sono stati individuati nove:
+beni archeologici
+beni architettonici e paesaggistici
+beni demoetnoantropologici
+beni fotografici
+beni musicali
+beni naturalistici
+beni numismatici
+beni scientifici e tecnologici
+beni storici e artistici
+
+I settori disciplinari si presentano più articolati rispetto agli ambiti di tutela previsti dalla struttura amministrativa del MiC e alcune tipologie di schede “specialistiche” possono essere utilizzate in ambiti di tutela diversi (vedere per esempio le schede NU - Beni Numismatici, PST - Patrimonio scientifico e tecnologico, SM - Strumenti musicali).
+
+**TIPOLOGIE**
+
+Ai settori disciplinari afferiscono le diverse tipologie di schede definite per la catalogazione dei beni.
+Le tipologie attualmente in uso o in corso di elaborazione sono:
+
 
 
 <table>
@@ -45,10 +102,10 @@ Ad oggi l'ICCD ha definito 30 tracciati catalografici, in relazione alle differe
   <tr>
    <td>AT
    </td>
-   <td><em>Reperti antropologici</em>
+   <td><em>Antropologia fisica</em>
    </td>
    <td>
-beni archeologici
+beni naturalistici
    </td>
   </tr>
   <tr>
@@ -281,566 +338,16 @@ beni architettonici e paesaggistici
 </table>
 
 
-
-*   **SCHEDE PER GLI AUTHORITY FILE**
-
-
-Modelli per l'acquisizione delle informazioni che riguardano entità (es. _Autori_, _Bibliografia_) o eventi (es. _Scavi archeologici_, _Ricognizioni archeologiche_) in stretta relazione con i beni culturali.
-
-Queste schede vengono utilizzate per registrare i dati in modo omogeneo e standardizzato, così da costituire degli archivi di riferimento, gli Authority file.
-
-Nel processo di catalogazione sono attualmente in uso le schede di Authority file: AUT - _Archivio controllato dei nomi: persone e enti_; BIB - _Bibliografia_; DSC - _Scavi archeologici_; RCG - _Ricognizioni archeologiche_.
+Oltre ai tipi di scheda sopra elencati, l’ICCD ha di recente elaborato la **SCAN - Scheda anagrafica bene culturale**, con lo scopo di semplificare i processi di lavoro nelle situazioni in cui sia necessario procedere in maniera più speditiva.
+Questa scheda, che affiancherà le altre tipologie di schede già in uso, senza sostituirle, prevede un **modello unico per tutte le categorie di beni culturali** - mobili, immobili e immateriali - **e per tutti i settori disciplinari**; contiene un set ridotto di informazioni, ma è comunque provvista di un codice univoco nazionale per l’identificazione del bene.
 
 
+Per quanto riguarda lo stato, cioè la situazione applicativa delle varie tipologie di normative, si hanno:
+normative in uso: sono quelle utilizzate nel processo di catalogazione
+normative in sperimentazione: normative in corso di definizione, che hanno raggiunto un livello tale di elaborazione da poter essere rese disponibili per attività di prova, ai fini del loro rilascio ufficiale come standard nazionali (http://www.iccd.beniculturali.it/it/sperimentazionenormative)
+normative obsolete: si tratta delle normative rilasciate in passato dall’ICCD ma ormai completamente superate e desuete; nella gestione informatizzata nel SIGECweb vengono utilizzate per l’acquisizione di dati pregressi e per la loro ricerca e consultazione in banca dati, ma il loro uso non è consentito per attività di nuova catalogazione.
+Un altro importante parametro è costituito dalla versione: gli standard ICCD, infatti, hanno subito aggiornamenti e modifiche nel corso del tempo, sia per quanto riguarda la struttura dei dati (cioè la sequenza di paragrafi, campi e sottocampi con le rispettive proprietà), sia per quanto riguarda le regole di compilazione. Tali cambiamenti, legati al progredire ed all'affinarsi della ricerca scientifica nei vari settori disciplinari, nonché alle esigenze della catalogazione, sempre più complesse ed articolate, hanno portato a definire “versioni” successive: 1.00 (le prime normative strutturate dall’ICCD per l’informatizzazione dei dati); 2.00 (le normative applicate nel software T3); 3.00 (le versioni di normative aggiornate elaborate in relazione alla prima fase di sviluppo del SIGEC-Sistema Informativo Generale del Catalogo negli anni 2002-2004) e 3.01 (anni 2005-2010), fino ad arrivare alla versione 4.00 attualmente in corso di elaborazione e sperimentazione.
 
-*   **SCHEDE PER I CONTENITORI**
-
-Modelli per l'acquisizione delle informazioni che riguardano i luoghi dove sono collocati e conservati beni culturali: questi luoghi nel linguaggio catalografico vengono definiti "contenitori" e rappresentano sul territorio "nodi di aggregazione" di beni (in particolare di beni mobili).
-
-
-L'ICCD ha individuato ad oggi due diverse tipologie di contenitori: 
-
-*   il _contenitore fisico_, definizione convenzionale che indica il luogo fisico dove si trova un bene o un insieme di beni (un edificio, un complesso architettonico o uno spazio territorial: un palazzo, un monumento archeologico, un giardino storico, una chiesa, un deposito, un sito archeologico, ecc.);
-*   il _contenitore giuridico_, definizione convenzionale che indica la struttura conservativa giuridicamente riconosciuta nella quale è collocato un bene o un insieme di beni (museo, galleria, pinacoteca, archivio, raccolta privata, ecc.).
-
-    In relazione a queste due tipologie sono state elaborate due distinte normative: la scheda CF per i _Contenitori fisici_ e la scheda CG per i _Contenitori giuridici_.
-
-*   **MODULI**
-
-Modelli per approfondire aspetti specialistici (ad es. il modulo EP - _Epigrafia_ per la descrizione dei documenti epigrafici, da allegare alle schede di catalogo quando utile) o per trattare aspetti particolari (ad es. il modulo MINP per l'inventariazione patrimoniale o i moduli MOPR e MOSI per le indagini di Archeologia Preventiva).
-
-
-Un particolare tipo di modulo è il MODI - _Modulo informativo_, predisposto per l'acquisizione speditiva di dati in attività preliminari e propedeutiche alla catalogazione (censimenti, segnalazioni, organizzazione di lotti di materiali, ecc.). 
-
-
-**NORMATIVE ICCD: LE VERSIONI**
-
-
-Per le normative rilasciate dall'ICCD, un importante parametro è costituito dalla **_versione_**: gli standard catalografici, infatti, hanno subito aggiornamenti e modifiche nel corso del tempo, sia per quanto riguarda la struttura dei dati (cioè la sequenza di paragrafi, campi e sottocampi con le rispettive proprietà), sia per quanto riguarda le regole di compilazione. Tali cambiamenti, legati al progredire ed all'affinarsi della ricerca scientifica nei vari settori disciplinari, nonché alle esigenze della catalogazione, sempre più complesse ed articolate, hanno portato a definire "versioni" successive: **1.00** (le prime normative strutturate dall'ICCD per l'informatizzazione dei dati); **2.00** (le normative applicate nel software T3); **3.00** (le versioni di normative elaborate in relazione alla prima fase di sviluppo del _SIGEC-Sistema Informativo Generale del Catalogo_ negli anni 2002-2004) e **3.01** (anni 2005-2010), fino ad arrivare alla più recente versione **4.00**.
-
-
-Le **normative di versione 1.00** (i c.d. "libretti blu" pubblicati intorno agli anni Novanta del secolo scorso), sono considerate a tutti gli effetti "obsolete" e non più utilizzate nelle attività di catalogazione.
-
-
-Le **normative di versione 2.00** (elencate nella tabella di seguito), sono ancora utilizzate nel SIGECweb per attività di acquisizione e revisione di schede pregresse, ma è nelle intenzioni dell'Istituto renderle al più presto "obsolete", per sollecitare l'utilizzo delle normative di versione più recente, più efficienti per l'acquisizione e la gestione delle informazioni.
-
-
-<table>
-  <tr>
-   <td>
-<strong>Sigla</strong>
-   </td>
-   <td><strong>Definizione</strong>
-   </td>
-   <td><strong>Tipo</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>A</strong>
-   </td>
-   <td>Architettura
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>AUT</strong>
-   </td>
-   <td>Autore
-   </td>
-   <td>Authority file
-   </td>
-  </tr>
-  <tr>
-   <td><strong>BDM</strong>
-   </td>
-   <td>Beni demoetnoantropologici materiali
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>BIB</strong>
-   </td>
-   <td>Bibliografia
-   </td>
-   <td>Authority file
-   </td>
-  </tr>
-  <tr>
-   <td><strong>D</strong>
-   </td>
-   <td>Disegni
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>F</strong>
-   </td>
-   <td>Fotografia
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>MI</strong>
-   </td>
-   <td>Matrici incise
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>OA</strong>
-   </td>
-   <td>Opere/oggetti d'arte
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>PG</strong>
-   </td>
-   <td>Parchi/giardini
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>RA</strong>
-   </td>
-   <td>Reperti archeologici
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>S</strong>
-   </td>
-   <td>Stampe
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-</table>
-
-
-
-Le **normative di versione 3.00 e 3.01 **(nelle due tabelle che seguono) costituiscono l'apparato di schede ad oggi più completo ed aggiornato:
-
-
-<table>
-  <tr>
-   <td>
-<strong>Sigla</strong>
-   </td>
-   <td><strong>Definizione</strong>
-   </td>
-   <td><strong>Tipo</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>A</strong>
-   </td>
-   <td>Architettura
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>AUT</strong>
-   </td>
-   <td>Autore
-   </td>
-   <td>Authority file
-   </td>
-  </tr>
-  <tr>
-   <td><strong>BDI</strong>
-   </td>
-   <td>Beni demoetnoantropologici immateriali
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>BIB</strong>
-   </td>
-   <td>Bibliografia
-   </td>
-   <td>Authority file
-   </td>
-  </tr>
-  <tr>
-   <td><strong>CA</strong>
-   </td>
-   <td>Complessi archeologici
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>D</strong>
-   </td>
-   <td>Disegni
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>DSC</strong>
-   </td>
-   <td>Scavi archeologici
-   </td>
-   <td>Authority file
-   </td>
-  </tr>
-  <tr>
-   <td><strong>F</strong>
-   </td>
-   <td>Fotografia
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>MA</strong>
-   </td>
-   <td>Monumenti archeologici
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>MI</strong>
-   </td>
-   <td>Matrici incise
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>NU</strong>
-   </td>
-   <td>Beni numismatici
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>OA</strong>
-   </td>
-   <td>Opere/oggetti d'arte
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>OAC</strong>
-   </td>
-   <td>Opere/oggetti d'arte contemporanea
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>PG</strong>
-   </td>
-   <td>Parchi/giardini
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>RA</strong>
-   </td>
-   <td>Reperti archeologici
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>RCG</strong>
-   </td>
-   <td>Ricognizioni archeologiche
-   </td>
-   <td>Authority file
-   </td>
-  </tr>
-  <tr>
-   <td><strong>S</strong>
-   </td>
-   <td>Stampe
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>SAS</strong>
-   </td>
-   <td>Saggi stratigrafici
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>SI</strong>
-   </td>
-   <td>Siti archeologici
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>TMA</strong>
-   </td>
-   <td>Tabella materiali archeologici
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-   <td><strong>   Sigla</strong>
-   </td>
-   <td><strong>Definizione</strong>
-   </td>
-   <td><strong>Tipo</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>AT</strong>
-   </td>
-   <td>Reperti antropologici
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>AUT</strong>
-   </td>
-   <td>Autore
-   </td>
-   <td>Authority file
-   </td>
-  </tr>
-  <tr>
-   <td><strong>BDI</strong>
-   </td>
-   <td>Beni demoetnoantropologici immateriali
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>BNB</strong>
-   </td>
-   <td>Beni naturalistici-Botanica
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>BNM</strong>
-   </td>
-   <td>Beni naturalistici-Mineralogia
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>BNP</strong>
-   </td>
-   <td>Beni naturalistici-Paleontologia
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>BNPE</strong>
-   </td>
-   <td>Beni naturalistici-Petrologia
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>BNPL</strong>
-   </td>
-   <td>Beni naturalistici-Planetologia
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>BNZ</strong>
-   </td>
-   <td>Beni naturalistici-Zoologia
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>PST</strong>
-   </td>
-   <td>Patrimonio Scientifico e Tecnologico
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>SMO</strong>
-   </td>
-   <td>Strumenti Musicali-Organo
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>VeAC</strong>
-   </td>
-   <td>Vestimenti antichi/contemporanei
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-</table>
-
-
-Le **normative di versione 4.00** sono il risultato del lavoro di sistematizzazione dell'intero apparato degli standard svolto dall'ICCD in questi ultimi anni, che ha portato alla definizione di una "normativa quadro" (la c.d. "Normativa trasversale") che rappresenta ad oggi il punto di riferimento per la definizione e l'aggiornamento di qualsiasi tipologia di modello catalografico ([http://www.iccd.beniculturali.it/index.php?it/473/standard-catalografici/Standard/61](http://www.iccd.beniculturali.it/index.php?it/473/standard-catalografici/Standard/61)).
-
-
-Sono stati ad oggi rilasciati dall'ICCD i seguenti standard di versione 4.00:
-
-
-<table>
-  <tr>
-   <td><strong>Sigla</strong>
-   </td>
-   <td><strong>Definizione</strong>
-   </td>
-   <td><strong>Tipo</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>AUT</strong>
-   </td>
-   <td>Archivio controllato dei nomi: persone e enti
-   </td>
-   <td>Authority file
-   </td>
-  </tr>
-  <tr>
-   <td><strong>BDI</strong>
-   </td>
-   <td>Beni demoetnoantropologici immateriali
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>BDM</strong>
-   </td>
-   <td>Beni demoetnoantropologici materiali
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>BIB</strong>
-   </td>
-   <td>Bibliografia
-   </td>
-   <td>Authority file
-   </td>
-  </tr>
-  <tr>
-   <td><strong>CF</strong>
-   </td>
-   <td>Contenitore fisico
-   </td>
-   <td>Contenitore
-   </td>
-  </tr>
-  <tr>
-   <td><strong>CG</strong>
-   </td>
-   <td>Contenitore giuridico
-   </td>
-   <td>Contenitore
-   </td>
-  </tr>
-  <tr>
-   <td><strong>DSC</strong>
-   </td>
-   <td>Scavi archeologici
-   </td>
-   <td>Authority file
-   </td>
-  </tr>
-  <tr>
-   <td><strong>F</strong>
-   </td>
-   <td>Fotografia
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>FF</strong>
-   </td>
-   <td>Fondi fotografici
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>MODI</strong>
-   </td>
-   <td>Modulo informativo
-   </td>
-   <td>Altre normative
-   </td>
-  </tr>
-  <tr>
-   <td><strong>PST</strong>[^2]
-   </td>
-   <td>Patrimonio scientifico e tecnologico
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-  <tr>
-   <td><strong>RCG</strong>
-   </td>
-   <td>Ricognizioni archeologiche
-   </td>
-   <td>Authority file
-   </td>
-  </tr>
-  <tr>
-   <td><strong>SM</strong>
-   </td>
-   <td>Strumenti musicali
-   </td>
-   <td>Scheda di catalogo
-   </td>
-  </tr>
-</table>
-
-
-
- Nel SIGECweb vengono gestite tutte le versioni delle normative rilasciate dall'ICCD nel corso del tempo: ciò consente di acquisire e consultare nella banca dati del Catalogo Generale del patrimonio archeologico, architettonico e paesaggistico, storico artistico ed etnoantropologico anche tipi di schede ormai superati o prodotti con strumenti informatici basati su versioni pregresse degli standard.
-
-
-## Notes
-
-[^1]:<p>    	 Per questa tipologia di scheda non è stato rilasciato nel corso del tempo un tracciato ufficiale per l'informatizzazione allineato con quello delle altre schede di catalogo; l'Istituto ha di recente avviato i lavori per elaborare una versione della normativa aggiornata direttamente alla versione 4.00 degli standard ICCD (vedi avanti). 
-
-[^2]:<p>    	 La normativa PST sarà attiva in SIGECweb entro settembre 2018.
 
 
 
