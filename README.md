@@ -295,6 +295,14 @@ beni architettonici e paesaggistici
    <td>beni archeologici
    </td>
   </tr>
+   <tr>
+   <td>SCAN
+   </td>
+   <td><em>Scheda anagrafica</em>
+   </td>
+   <td>tutti i beni
+   </td>
+  </tr>
   <tr>
    <td>SI
    </td>
