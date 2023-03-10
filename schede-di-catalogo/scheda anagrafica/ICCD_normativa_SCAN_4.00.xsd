@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
  <!-- =============== INIZIO ELEMENTI PER LA VALIDAZIONE DEI FILE DI IMPORT/EXPORT ==================-->
  <!-- =============== per validare la singola scheda, eliminare dal file XSD questa parte iniziale racchiusa tra i commenti==================-->
  <xs:element name="schede">
