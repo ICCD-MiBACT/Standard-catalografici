@@ -32,9 +32,9 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	<xs:element name="note">
-		<xs:complexType/>
-	</xs:element>
+	<xs:simpleType>
+			<xs:restriction base="xs:string"/>
+		</xs:simpleType>
 	<xs:element name="tipo">
 		<xs:simpleType>
 			<xs:restriction base="xs:string"/>
