@@ -313,7 +313,9 @@ Per quanto riguarda lo stato, cioè la situazione applicativa delle varie tipolo
 Un altro importante parametro è costituito dalla **version**e: gli standard ICCD, infatti, hanno subito aggiornamenti e modifiche nel corso del tempo, sia per quanto riguarda la struttura dei dati (cioè la sequenza di paragrafi, campi e sottocampi con le rispettive proprietà), sia per quanto riguarda le regole di compilazione. Tali cambiamenti, legati al progredire e all'affinarsi della ricerca scientifica nei vari settori disciplinari, nonché alle esigenze della catalogazione, sempre più complesse ed articolate, hanno portato a definire “versioni” successive: **1.00** (le prime normative strutturate dall’ICCD per l’informatizzazione dei dati); **2.00** (le normative applicate nel software T3); **3.00** (le versioni di normative elaborate in relazione alla prima fase di sviluppo del SIGEC-Sistema Informativo Generale del Catalogo negli anni 2002-2004) e **3.01** (anni 2005-2010); **4.00** (anni 2015-2021: si tratta delle normative elaborate sulla base della prima redazione completa della Normativa quadro definita dall’ICCD, la c.d. “Normativa trasversale”); fino ad arrivare alla versione **4.01** (dal 2022), attualmente in corso di elaborazione e sperimentazione.
 
 Maria Letizia Mancinelli
+
 ICCD - Responsabile del Servizio standard e metodologie
+
 aprile 2023
 
 
