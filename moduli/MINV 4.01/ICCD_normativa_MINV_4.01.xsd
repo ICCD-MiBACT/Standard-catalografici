@@ -250,7 +250,7 @@
         <xs:complexType>
          <xs:simpleContent>
           <xs:extension base="xs:string">
-           <xs:attribute name="alias" type="xs:string" use="optional" fixed="Ambito di riferimento"/>
+           <xs:attribute name="alias" type="xs:string" use="optional" fixed="Ambito/settore di riferimento"/>
            <xs:attribute name="len" type="xs:string" use="optional" fixed="0,50"/>
            <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
            <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
