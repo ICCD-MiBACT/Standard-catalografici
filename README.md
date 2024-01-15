@@ -48,18 +48,18 @@ Per quanto riguarda in particolare le SCHEDE DI CATALOGO, gli strumenti più not
 
 **AMBITI DI TUTELA MiC**
 
-sono gli ambiti di tutela previsti dall’attuale organizzazione del Ministero della cultura in cui vengono utilizzati gli standard ICCD per la catalogazione:
-archeologico
-architettonico e paesaggistico
-demoetnoantropologico
-storico artistico
+nel quadro dell’organizzazione del Ministero della cultura, sono gli ambiti del patrimonio di competenza dell’ICCD, in cui vengono utilizzati gli standard elaborati dall’Istituto:<br/>
+archeologico<br/>
+architettonico e paesaggistico<br/>
+demoetnoantropologico<br/>
+storico artistico<br/>
 
 **CATEGORIE**
 
-in relazione ai tipi di beni descritti, le schede di catalogo sono raggruppate in:
-BENI MOBILI
-BENI IMMOBILI
-BENI IMMATERIALI
+in relazione ai tipi di beni descritti, le schede di catalogo sono raggruppate in:<br/>
+BENI MOBILI<br/>
+BENI IMMOBILI<br/>
+BENI IMMATERIALI<br/>
 
 **SETTORI DISCIPLINARI**
 
