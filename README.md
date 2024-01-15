@@ -41,7 +41,7 @@ Nel sistema degli standard sono attualmente in uso: il MODI - Modulo informativo
                                                            *   *   *
 
 
-Non rientrano tra gli standard catalografici i tracciati per le **ENTITA' MULTIMEDIALI**, strumenti funzionali alla gestione nel SIGECweb della documentazione di corredo ai modelli catalografici. Tali tracciati sono comunque resi disponibili in questa sezione.
+Non rientrano tra gli standard catalografici i tracciati per le **ENTITA' MULTIMEDIALI**, strumenti funzionali alla gestione nel SIGECweb della documentazione di corredo ai modelli catalografici, resi comunque  disponibili in questa sezione.
 
 
                                                            *   *   *
