@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<!-- =============== INIZIO ELEMENTI PER LA VALIDAZIONE DEI FILE DI IMPORT/EXPORT ==================-->
+	<!-- =============== per validare la singola scheda, eliminare dal file XSD questa parte iniziale racchiusa tra i commenti==================-->
+	<xs:element name="schede">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="scheda" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="csm_root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="csm_info"/>
+				<xs:element ref="schede"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="csm_info">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="nome_normativa" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="tipo" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="ver_numero" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="data_crea" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="ente_schedatore" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="concessione" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="spedizione" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="note" minOccurs="1" maxOccurs="1"/>
+				<xs:element ref="numero_schede" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="note">
+		<xs:complexType/>
+	</xs:element>
+	<xs:element name="tipo">
+		<xs:simpleType>
+			<xs:restriction base="xs:string"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="data_crea">
+		<xs:simpleType>
+			<xs:restriction base="xs:decimal"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="spedizione">
+		<xs:complexType/>
+	</xs:element>
+	<xs:element name="ver_numero">
+		<xs:simpleType>
+			<xs:restriction base="xs:decimal"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="concessione">
+		<xs:complexType/>
+	</xs:element>
+	<xs:element name="numero_schede">
+		<xs:simpleType>
+			<xs:restriction base="xs:decimal"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="nome_normativa">
+		<xs:simpleType>
+			<xs:restriction base="xs:string"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="ente_schedatore">
+		<xs:simpleType>
+			<xs:restriction base="xs:string"/>
+		</xs:simpleType>
+	</xs:element>
+	<!-- =============== FINE ELEMENTI PER LA VALIDAZIONE DEI FILE DI IMPORT/EXPORT ==================-->
+	<xs:element name="scheda" id="tag_normativa">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MC" id="paragrafo_MC" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="DCM" id="campostrutturato_MC_DCM" minOccurs="1" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="DCMN" id="camposemplice_MC_DCM_DCMN" minOccurs="1" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="alias" type="xs:string" use="optional" fixed="Codice identificativo"/>
+														<xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+														<xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+														<xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+														<xs:attribute name="node_idSpecial" type="xs:string" use="optional" fixed="true"/>
+														<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DCMP" id="camposemplice_MC_DCM_DCMP" minOccurs="1" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="alias" type="xs:string" use="optional" fixed="Tipo/supporto/formato"/>
+														<xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+														<xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+														<xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+														<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+														<xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VA_DCMP_400"/>
+														<xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$*"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DCMS" id="camposemplice_MC_DCM_DCMS" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="alias" type="xs:string" use="optional" fixed="Specifiche"/>
+														<xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+														<xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+														<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DCMM" id="camposemplice_MC_DCM_DCMM" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="alias" type="xs:string" use="optional" fixed="Titolo/didascalia"/>
+														<xs:attribute name="len" type="xs:string" use="optional" fixed="0,500"/>
+														<xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+														<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DCMA" id="camposemplice_MC_DCM_DCMA" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="alias" type="xs:string" use="optional" fixed="Autore (persona/ente collettivo)"/>
+														<xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+														<xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+														<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DCMR" id="camposemplice_MC_DCM_DCMR" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="alias" type="xs:string" use="optional" fixed="Riferimento cronologico"/>
+														<xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+														<xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+														<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DCME" id="camposemplice_MC_DCM_DCME" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="alias" type="xs:string" use="optional" fixed="Ente proprietario"/>
+														<xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+														<xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+														<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DCMC" id="camposemplice_MC_DCM_DCMC" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="alias" type="xs:string" use="optional" fixed="Collocazione"/>
+														<xs:attribute name="len" type="xs:string" use="optional" fixed="0,500"/>
+														<xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+														<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DCMW" id="camposemplice_MC_DCM_DCMW" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="alias" type="xs:string" use="optional" fixed="Indirizzo web (URL)"/>
+														<xs:attribute name="len" type="xs:string" use="optional" fixed="0,500"/>
+														<xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+														<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DCML" id="camposemplice_MC_DCM_DCML" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="alias" type="xs:string" use="optional" fixed="Licenza/condizioni d'uso"/>
+														<xs:attribute name="len" type="xs:string" use="optional" fixed="0,15"/>
+														<xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+														<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+														<xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_DCML"/>
+														<xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="DCMY" id="camposemplice_MC_DCM_DCMY" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="alias" type="xs:string" use="optional" fixed="Autorizzazione per privacy"/>
+														<xs:attribute name="len" type="xs:string" use="optional" fixed="0,15"/>
+														<xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+														<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+														<xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_DCMY"/>
+														<xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="alias" type="xs:string" use="optional" fixed="DOCUMENTO"/>
+									<xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+									<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="alias" type="xs:string" use="optional" fixed="METADATI DOCUMENTAZIONE"/>
+						<xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+						<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="MM" id="paragrafo_MM" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="MMT" id="campostrutturato_MM_MMT" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="MMTO" id="camposemplice_MM_MMT_MMTO" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="alias" type="xs:string" use="optional" fixed="Nome file"/>
+														<xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+														<xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+														<xs:attribute name="node_uploadFile" type="xs:string" use="optional" fixed="true"/>
+														<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="alias" type="xs:string" use="optional" fixed="METADATI TECNICI DATO MULTIMEDIALE"/>
+									<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="alias" type="xs:string" use="optional" fixed="METADATI DATO MULTIMEDIALE"/>
+						<xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+<!--normativa#DCM#4.00#ICCD0#Documentazione#2#*#false#false##null#null#false-->
