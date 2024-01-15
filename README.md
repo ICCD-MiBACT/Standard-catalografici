@@ -38,8 +38,8 @@ Modelli per la registrazione standardizzata di informazioni in occasione di atti
 
 Nel sistema degli standard sono attualmente in uso: il MODI - Modulo informativo (per segnalazioni e censimenti di entità mobili, immobili e immateriali); il MEPI - Modulo per l'inventariazione degli Elementi del Patrimonio culturale Immateriale; il MINP - Modulo per l’inventariazione patrimoniale dei beni archeologici; il MIDF - Modulo per l’inventariazione dei documenti fotografici (inventariazione patrimoniale o di altro tipo); il MINV - Modulo per l’inventariazione (patrimoniale o di altro tipo); il MOEP - Modulo per l’epigrafia (strumento di approfondimento specialistico, in corso di sperimentazione); il MOPR - Modulo progetto e il MOSI - Modulo Area/sito, da applicare nelle indagini di archeologia preventiva (in corso di sperimentazione).
 
-**ENTITA' MULTIMEDIALI**
-Strumenti funzionali alla gestione nel SIGECweb della documentazione di corredo ai modelli catalografici;
+
+Non rientrano tra gli standard catalografici i tracciati per le **ENTITA' MULTIMEDIALI**, strumenti funzionali alla gestione nel SIGECweb della documentazione di corredo ai modelli catalografici. Tali tracciati sono comunque resi disponibili in questa sezione.
 
 
                                                            *   *   *
