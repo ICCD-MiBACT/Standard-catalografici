@@ -63,16 +63,16 @@ BENI IMMATERIALI<br/>
 
 **SETTORI DISCIPLINARI**
 
-le tipologie di schede disponibili per la catalogazione dei beni culturali sono organizzate in base ai diversi settori disciplinari a cui afferiscono; ad oggi ne sono stati individuati nove:
-beni archeologici
-beni architettonici e paesaggistici
-beni demoetnoantropologici
-beni fotografici
-beni musicali
-beni naturalistici
-beni numismatici
-beni scientifici e tecnologici
-beni storici e artistici
+le tipologie di schede disponibili per la catalogazione dei beni culturali sono organizzate in base ai diversi settori disciplinari a cui afferiscono; ad oggi ne sono stati individuati nove:<br/>
+beni archeologici<br/>
+beni architettonici e paesaggistici<br/>
+beni demoetnoantropologici<br/>
+beni fotografici<br/>
+beni musicali<br/>
+beni naturalistici<br/>
+beni numismatici<br/>
+beni scientifici e tecnologici<br/>
+beni storici e artistici<br/>
 
 I settori disciplinari si presentano più articolati rispetto agli ambiti di tutela previsti dalla struttura amministrativa del MiC e alcune tipologie di schede “specialistiche” possono essere utilizzate in ambiti di tutela diversi (vedere per esempio le schede NU - Beni Numismatici, PST - Patrimonio scientifico e tecnologico, SM - Strumenti musicali).
 
