@@ -1,0 +1,1853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+          elementFormDefault="qualified"
+          attributeFormDefault="unqualified"
+          vc:minVersion="1.1">
+   <!-- =============== INIZIO ELEMENTI PER LA VALIDAZIONE DEI FILE DI IMPORT/EXPORT ==================-->
+   <!-- =============== per validare la singola scheda, eliminare dal file XSD questa parte iniziale racchiusa tra i commenti==================-->
+   <xs:element name="schede">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="scheda" maxOccurs="unbounded"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="csm_root">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="csm_info"/>
+            <xs:element ref="schede"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="csm_info">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="nome_normativa" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="tipo" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="ver_numero" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="data_crea" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="ente_schedatore" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="concessione" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="spedizione" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="note" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="numero_schede" minOccurs="1" maxOccurs="1"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="note">
+      <xs:complexType/>
+   </xs:element>
+   <xs:element name="tipo">
+      <xs:simpleType>
+         <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="data_crea">
+      <xs:simpleType>
+         <xs:restriction base="xs:decimal"/>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="spedizione">
+      <xs:complexType/>
+   </xs:element>
+   <xs:element name="ver_numero">
+      <xs:simpleType>
+         <xs:restriction base="xs:decimal"/>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="concessione">
+      <xs:complexType/>
+   </xs:element>
+   <xs:element name="numero_schede">
+      <xs:simpleType>
+         <xs:restriction base="xs:decimal"/>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="nome_normativa">
+      <xs:simpleType>
+         <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+   </xs:element>
+   <xs:element name="ente_schedatore">
+      <xs:simpleType>
+         <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+   </xs:element>
+   <!-- =============== FINE ELEMENTI PER LA VALIDAZIONE DEI FILE DI IMPORT/EXPORT ==================-->
+   <xs:element name="scheda" id="tag_normativa">
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element name="CD" id="paragrafo_CD" minOccurs="1" maxOccurs="1">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="TSK" id="camposemplice_EVE_CD_TSK" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Tipo scheda"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,4"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                 <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_TSK_EVE"/>
+                                 <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="LIR" id="camposemplice_EVE_CD_LIR" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Livello"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,1"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                 <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_LIR"/>
+                                 <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="NCU" id="camposemplice_EVE_CD_NCU" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Codice univoco ICCD"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,8"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="ESC" id="camposemplice_EVE_CD_ESC" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Ente schedatore"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="alias" type="xs:string" use="optional" fixed="CODICI"/>
+                  <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                  <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="AC" id="paragrafo_AC" minOccurs="0" maxOccurs="1">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="ACC" id="campostrutturato_AC_ACC" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="ACCE" id="camposemplice_AC_ACC_ACCE" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Ente/soggetto responsabile"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="ACCC" id="camposemplice_AC_ACC_ACCC" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Codice identificativo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,150"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="ACCP" id="camposemplice_AC_ACC_ACCP" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Progetto di riferimento"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="ACCS" id="camposemplice_AC_ACC_ACCS" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Note"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2000"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="ACCW" id="camposemplice_AC_ACC_ACCW" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Indirizzo web"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,500"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="ALTRO CODICE AUTHORITY"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="alias" type="xs:string" use="optional" fixed="ALTRI CODICI"/>
+                  <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="EV" id="paragrafo_EV" minOccurs="1" maxOccurs="1">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="EVE" id="campostrutturato_EV_EVE" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="EVEH" id="camposemplice_EV_EVE_EVEH" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Codice identificativo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,8"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="node_idSpecial" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="EVEM" id="camposemplice_EV_EVE_EVEM" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Tipo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_EVEM_AVEM_EVE"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="EVEC" id="camposemplice_EV_EVE_EVEC" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Categoria"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                                        fixed="VC_EVEC_EVEF_EVET_EVE"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="EVEF" id="camposemplice_EV_EVE_EVEF" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Definizione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                                        fixed="VC_EVEC_EVEF_EVET_EVE"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$2"/>
+                                          <xs:attribute name="binding_parentExpr" type="xs:string" use="optional" fixed="EV/EVE/EVEC"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="EVET" id="camposemplice_EV_EVE_EVET" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Specifiche"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                                        fixed="VC_EVEC_EVEF_EVET_EVE"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$3"/>
+                                          <xs:attribute name="binding_parentExpr" type="xs:string" use="optional" fixed="EV/EVE/EVEF"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional"
+                                         fixed="IDENTIFICAZIONE/DEFINIZIONE"/>
+                           <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="OGD" id="campostrutturato_EV_OGD" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="OGDT" id="camposemplice_EV_OGD_OGDT" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Tipo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_OGDT"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="OGDN" id="camposemplice_EV_OGD_OGDN" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Denominazione/titolo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="OGDR" id="camposemplice_EV_OGD_OGDR" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Indicazioni cronologiche"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="OGDS" id="camposemplice_EV_OGD_OGDS" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Note"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2000"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="DENOMINAZIONE/TITOLO"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="DTC" id="campostrutturato_EV_DTC" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="DTCD" id="camposemplice_EV_DTC_DTCD" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Datazione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DTCC" id="camposemplice_EV_DTC_DTCC" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Ciclicità"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_DTCC"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DTCP" id="camposemplice_EV_DTC_DTCP" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Periodicità"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_DTCP_EVE"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DTCU" id="camposemplice_EV_DTC_DTCU" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Durata"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DTCN" id="camposemplice_EV_DTC_DTCN" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Note"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2000"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="DATI CRONOLOGICI"/>
+                           <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="DAD" id="campostrutturato_EV_DAD" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="DADD" id="camposemplice_EV_DAD_DADD" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Descrizione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,10000"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DADN" id="camposemplice_EV_DAD_DADN" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Note"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2000"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="DATI DESCRITTIVI"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="AUT" id="campostrutturato_EV_AUT" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="AUTJ" id="camposemplice_EV_AUT_AUTJ" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Ente schedatore"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="AUT"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional" fixed="CD/ESC"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="EV/AUT"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="true"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AUTH" id="camposemplice_EV_AUT_AUTH" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Codice identificativo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,8"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="AUT"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="AU/AUT/AUTH"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="EV/AUT/AUTJ"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AUTN" id="camposemplice_EV_AUT_AUTN" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Nome di persona o ente"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="AUT"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="AU/AUT/AUTN"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="EV/AUT/AUTH"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AUTP" id="camposemplice_EV_AUT_AUTP" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Tipo intestazione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                                        fixed="VC_Tipo intestazione"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="AUT"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="AU/AUT/AUTP"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="EV/AUT/AUTN"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AUTA" id="camposemplice_EV_AUT_AUTA" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Indicazioni cronologiche"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="AUT"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="AU/AUT/AUTA"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="EV/AUT/AUTP"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AUTR" id="camposemplice_EV_AUT_AUTR" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Ruolo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VA_AUTR_EVE"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AUTZ" id="camposemplice_EV_AUT_AUTZ" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Note"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2000"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="PERSONE/ENTI COINVOLTI"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="NRL" id="camposemplice_EVE_EV_NRL" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Notizie raccolte sul luogo"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,5000"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="NSC" id="camposemplice_EVE_EV_NSC" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Notizie storico-critiche"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,5000"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="alias" type="xs:string" use="optional" fixed="EVENTO"/>
+                  <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                  <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="RV" id="paragrafo_RV" minOccurs="0" maxOccurs="1">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="AVE" id="campostrutturato_RV_AVE" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="AVER" id="camposemplice_RV_AVE_AVER" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Evento in relazione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_AVER"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AVEJ" id="camposemplice_RV_AVE_AVEJ" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Ente schedatore"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AVEH" id="camposemplice_RV_AVE_AVEH" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Codice identificativo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,8"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AVEM" id="camposemplice_RV_AVE_AVEM" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Tipo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_EVEM_AVEM_EVE"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AVEC" id="camposemplice_RV_AVE_AVEC" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Categoria"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AVEF" id="camposemplice_RV_AVE_AVEF" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Definizione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AVET" id="camposemplice_RV_AVE_AVET" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Specifiche"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AVEN" id="camposemplice_RV_AVE_AVEN" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Denominazione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AVED" id="camposemplice_RV_AVE_AVED" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Indicazioni cronologiche"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="AVEZ" id="camposemplice_RV_AVE_AVEZ" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Note"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2000"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional"
+                                         fixed="EVENTO COMPONENTE/ALTRO EVENTO"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="alias" type="xs:string" use="optional"
+                                fixed="RELAZIONI - EVENTI COMPONENTI/ALTRI EVENTI"/>
+                  <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="LC" id="paragrafo_LC" minOccurs="1" maxOccurs="1">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="PVC" id="campostrutturato_LC_PVC" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="PVCS" id="camposemplice_LC_PVC_PVCS" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Stato"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_geo" type="xs:string" use="optional" fixed="0"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                                        fixed="VC_Localizzazione_agg2019"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PVCR" id="camposemplice_LC_PVC_PVCR" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Regione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+                                          <xs:attribute name="node_geo" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                                        fixed="VC_Localizzazione_agg2019"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$2"/>
+                                          <xs:attribute name="binding_parentExpr" type="xs:string" use="optional" fixed="LC/PVC/PVCS"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PVCP" id="camposemplice_LC_PVC_PVCP" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Provincia"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2"/>
+                                          <xs:attribute name="node_geo" type="xs:string" use="optional" fixed="2"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                                        fixed="VC_Localizzazione_agg2019"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$3"/>
+                                          <xs:attribute name="binding_parentExpr" type="xs:string" use="optional" fixed="LC/PVC/PVCR"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PVCC" id="camposemplice_LC_PVC_PVCC" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Comune"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_geo" type="xs:string" use="optional" fixed="3"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                                        fixed="VC_Localizzazione_agg2019"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$4"/>
+                                          <xs:attribute name="binding_parentExpr" type="xs:string" use="optional" fixed="LC/PVC/PVCP"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PVCE" id="camposemplice_LC_PVC_PVCE" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Località estera"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,500"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PVCI" id="camposemplice_LC_PVC_PVCI" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Indirizzo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_geo" type="xs:string" use="optional" fixed="6"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PVCV" id="camposemplice_LC_PVC_PVCV" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Altri percorsi/specifiche"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2000"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="LOCALIZZAZIONE"/>
+                           <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PVL" id="camposemplice_EVE_LC_PVL" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Altro toponimo"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PVE" id="camposemplice_EVE_LC_PVE" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Diocesi"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                 <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_PVE_PRE"/>
+                                 <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$2"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PVZ" id="camposemplice_EVE_LC_PVZ" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Tipo di contesto"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                 <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_PVZ_PRZ"/>
+                                 <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="LCN" id="camposemplice_EVE_LC_LCN" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Note"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2000"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="alias" type="xs:string" use="optional"
+                                fixed="LOCALIZZAZIONE GEOGRAFICO - AMMINISTRATIVA"/>
+                  <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                  <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="LA" id="paragrafo_LA" minOccurs="0" maxOccurs="unbounded">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="TLC" id="camposemplice_EVE_LA_TLC" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Tipo di localizzazione"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                 <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_TLC_EVE"/>
+                                 <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PRV" id="campostrutturato_LA_PRV" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="PRVS" id="camposemplice_LA_PRV_PRVS" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Stato"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_geo" type="xs:string" use="optional" fixed="0"/>
+                                          <xs:attribute name="node_secondGeo" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                                        fixed="VC_Localizzazione_agg2019"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PRVR" id="camposemplice_LA_PRV_PRVR" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Regione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+                                          <xs:attribute name="node_geo" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_secondGeo" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                                        fixed="VC_Localizzazione_agg2019"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$2"/>
+                                          <xs:attribute name="binding_parentExpr" type="xs:string" use="optional" fixed="LA/PRV/PRVS"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PRVP" id="camposemplice_LA_PRV_PRVP" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Provincia"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2"/>
+                                          <xs:attribute name="node_geo" type="xs:string" use="optional" fixed="2"/>
+                                          <xs:attribute name="node_secondGeo" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                                        fixed="VC_Localizzazione_agg2019"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$3"/>
+                                          <xs:attribute name="binding_parentExpr" type="xs:string" use="optional" fixed="LA/PRV/PRVR"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PRVC" id="camposemplice_LA_PRV_PRVC" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Comune"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_geo" type="xs:string" use="optional" fixed="3"/>
+                                          <xs:attribute name="node_secondGeo" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                                        fixed="VC_Localizzazione_agg2019"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$4"/>
+                                          <xs:attribute name="binding_parentExpr" type="xs:string" use="optional" fixed="LA/PRV/PRVP"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PRVI" id="camposemplice_LA_PRV_PRVI" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Indirizzo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_geo" type="xs:string" use="optional" fixed="6"/>
+                                          <xs:attribute name="node_secondGeo" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PRVV" id="camposemplice_LA_PRV_PRVV" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Altri percorsi/specifiche"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2000"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="LOCALIZZAZIONE"/>
+                           <xs:attribute name="node_alternativeMandatory" type="xs:string" use="optional" fixed="1"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PRT" id="campostrutturato_LA_PRT" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="PRTK" id="camposemplice_LA_PRT_PRTK" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Continente/subcontinente"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                                        fixed="VC_CONTINENTE_SUBCONTINENTE"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PRTS" id="camposemplice_LA_PRT_PRTS" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Stato"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                                        fixed="VC_Localizzazione_agg2019"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PRTR" id="camposemplice_LA_PRT_PRTR" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional"
+                                                        fixed="Ripartizione amministrativa"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PRTL" id="camposemplice_LA_PRT_PRTL" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Località"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="LOCALIZZAZIONE ESTERA"/>
+                           <xs:attribute name="node_alternativeMandatory" type="xs:string" use="optional" fixed="1"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PRL" id="camposemplice_EVE_LA_PRL" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Altro toponimo"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PRE" id="camposemplice_EVE_LA_PRE" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Diocesi"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                 <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_PVE_PRE"/>
+                                 <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$2"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PRZ" id="camposemplice_EVE_LA_PRZ" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Tipo di contesto"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                 <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_PVZ_PRZ"/>
+                                 <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PRG" id="camposemplice_EVE_LA_PRG" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Area storico-geografica"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="PRD" id="campostrutturato_LA_PRD" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="PRDI" id="camposemplice_LA_PRD_PRDI" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional"
+                                                        fixed="Riferimento cronologico/data inizio"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="PRDU" id="camposemplice_LA_PRD_PRDU" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Data fine"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="DATI CRONOLOGICI"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="LAN" id="camposemplice_EVE_LA_LAN" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Note"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2000"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="alias" type="xs:string" use="optional"
+                                fixed="ALTRE LOCALIZZAZIONI GEOGRAFICO - AMMINISTRATIVE"/>
+                  <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                  <xs:assert test="PRV or PRT"/>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="GE" id="paragrafo_GE" minOccurs="0" maxOccurs="1">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="GEI" id="camposemplice_EVE_GE_GEI" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Identificativo Geometria"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,40"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="GEL" id="camposemplice_EVE_GE_GEL" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Tipo di localizzazione"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                 <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_GEL_EVE"/>
+                                 <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="GET" id="camposemplice_EVE_GE_GET" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Tipo di georeferenziazione"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                 <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_GET"/>
+                                 <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="GEP" id="camposemplice_EVE_GE_GEP" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Sistema di riferimento"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,50"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                 <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                               fixed="VC_Sistema di riferimento"/>
+                                 <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="GEC" id="campostrutturato_GE_GEC" minOccurs="1" maxOccurs="unbounded">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="GECX" id="camposemplice_GE_GEC_GECX" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Coordinata x"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,12"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="GECY" id="camposemplice_GE_GEC_GECY" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Coordinata y"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,12"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="COORDINATE"/>
+                           <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="GPB" id="campostrutturato_GE_GPB" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="GPBB" id="camposemplice_GE_GPB_GPBB" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Descrizione sintetica"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,500"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="GPBT" id="camposemplice_GE_GPB_GPBT" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Data"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,50"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="GPBU" id="camposemplice_GE_GPB_GPBU" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Indirizzo web (URL)"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,1000"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="BASE CARTOGRAFICA"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="GEN" id="camposemplice_EVE_GE_GEN" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Note"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,2000"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="alias" type="xs:string" use="optional" fixed="GEOREFERENZIAZIONE"/>
+                  <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="DO" id="paragrafo_DO" minOccurs="1" maxOccurs="1">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="DCM" id="campostrutturato_DO_DCM" minOccurs="1" maxOccurs="unbounded">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="DCMN" id="camposemplice_DO_DCM_DCMN" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Codice identificativo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,25"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="2"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="DCM"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="MC/DCM/DCMN"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="DO/DCM"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="true"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DCMP" id="camposemplice_DO_DCM_DCMP" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Tipo/supporto/formato"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VA_DCMP_400"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$*"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="DCM"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="MC/DCM/DCMP"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="DO/DCM/DCMN"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DCMS" id="camposemplice_DO_DCM_DCMS" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Specifiche"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="DCM"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="MC/DCM/DCMS"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="DO/DCM/DCMP"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DCMM" id="camposemplice_DO_DCM_DCMM" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Titolo/didascalia"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,500"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="2"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="DCM"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="MC/DCM/DCMM"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="DO/DCM/DCMS"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DCMA" id="camposemplice_DO_DCM_DCMA" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional"
+                                                        fixed="Autore (persona/ente collettivo)"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="DCM"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="MC/DCM/DCMA"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="DO/DCM/DCMM"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DCMR" id="camposemplice_DO_DCM_DCMR" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Riferimento cronologico"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="DCM"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="MC/DCM/DCMR"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="DO/DCM/DCMA"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DCME" id="camposemplice_DO_DCM_DCME" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Ente proprietario"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="DCM"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="MC/DCM/DCME"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="DO/DCM/DCMR"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DCMC" id="camposemplice_DO_DCM_DCMC" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Collocazione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,500"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="2"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="DCM"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="MC/DCM/DCMC"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="DO/DCM/DCME"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DCMW" id="camposemplice_DO_DCM_DCMW" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Indirizzo web (URL)"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,500"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="DCM"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="MC/DCM/DCMW"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="DO/DCM/DCMC"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DCML" id="camposemplice_DO_DCM_DCML" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Licenza/condizioni d'uso"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,15"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_DCML"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="DCM"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="MC/DCM/DCML"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="DO/DCM/DCMW"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DCMY" id="camposemplice_DO_DCM_DCMY" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Autorizzazione per privacy"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,15"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_DCMY"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="DCM"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="MC/DCM/DCMY"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="DO/DCM/DCML"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DCMK" id="camposemplice_DO_DCM_DCMK" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Nome file"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="2"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="DCM"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="MM/MMT/MMTO"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="DO/DCM/DCMY"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="DCMT" id="camposemplice_DO_DCM_DCMT" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Note"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,1000"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="2"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="linking_sourceType" type="xs:string" use="optional" fixed="DCM"/>
+                                          <xs:attribute name="linking_sourceVersion" type="xs:string" use="optional" fixed="4.00_ICCD0"/>
+                                          <xs:attribute name="linking_importMapping" type="xs:string" use="optional"
+                                                        fixed="MC/DCM/DCMT"/>
+                                          <xs:attribute name="linking_follows" type="xs:string" use="optional" fixed="DO/DCM/DCMK"/>
+                                          <xs:attribute name="linking_followsAsChild" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="DOCUMENTO"/>
+                           <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="BIB" id="campostrutturato_DO_BIB" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="BIBX" id="camposemplice_DO_BIB_BIBX" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Genere"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,50"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                          <xs:attribute name="binding_thesId" type="xs:string" use="optional" fixed="VC_BIBX_401"/>
+                                          <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBR" id="camposemplice_DO_BIB_BIBR" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Abbreviazione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,100"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBM" id="camposemplice_DO_BIB_BIBM" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Riferimento completo"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,1000"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_contextMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="BIBW" id="camposemplice_DO_BIB_BIBW" minOccurs="0" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Indirizzo web (URL)"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,500"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="BIBLIOGRAFIA/SITOGRAFIA"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="alias" type="xs:string" use="optional" fixed="DOCUMENTAZIONE"/>
+                  <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                  <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="CM" id="paragrafo_CM" minOccurs="1" maxOccurs="1">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="CMP" id="campostrutturato_CM_CMP" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:sequence>
+                              <xs:element name="CMPD" id="camposemplice_CM_CMP_CMPD" minOccurs="1" maxOccurs="1">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional" fixed="Anno di redazione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,4"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                              <xs:element name="CMPN" id="camposemplice_CM_CMP_CMPN" minOccurs="1" maxOccurs="unbounded">
+                                 <xs:complexType>
+                                    <xs:simpleContent>
+                                       <xs:extension base="xs:string">
+                                          <xs:attribute name="alias" type="xs:string" use="optional"
+                                                        fixed="Responsabile ricerca e redazione"/>
+                                          <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                          <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                          <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                          <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                       </xs:extension>
+                                    </xs:simpleContent>
+                                 </xs:complexType>
+                              </xs:element>
+                           </xs:sequence>
+                           <xs:attribute name="alias" type="xs:string" use="optional" fixed="REDAZIONE"/>
+                           <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                           <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="RSR" id="camposemplice_EVE_CM_RSR" minOccurs="0" maxOccurs="unbounded">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional"
+                                               fixed="Referente verifica scientifica"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="FUR" id="camposemplice_EVE_CM_FUR" minOccurs="1" maxOccurs="unbounded">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Funzionario responsabile"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,250"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                     <xs:element name="ADP" id="camposemplice_EVE_CM_ADP" minOccurs="1" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Profilo di pubblicazione"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,1"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                                 <xs:attribute name="binding_thesId" type="xs:string" use="optional"
+                                               fixed="VC_ADP_Authority_401"/>
+                                 <xs:attribute name="binding_levelExpr" type="xs:string" use="optional" fixed="$1"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="alias" type="xs:string" use="optional"
+                                fixed="CERTIFICAZIONE E GESTIONE DEI DATI"/>
+                  <xs:attribute name="node_linkMandatory" type="xs:string" use="optional" fixed="true"/>
+                  <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+               </xs:complexType>
+            </xs:element>
+            <xs:element name="AN" id="paragrafo_AN" minOccurs="0" maxOccurs="1">
+               <xs:complexType>
+                  <xs:sequence>
+                     <xs:element name="OSS" id="camposemplice_EVE_AN_OSS" minOccurs="0" maxOccurs="1">
+                        <xs:complexType>
+                           <xs:simpleContent>
+                              <xs:extension base="xs:string">
+                                 <xs:attribute name="alias" type="xs:string" use="optional" fixed="Osservazioni"/>
+                                 <xs:attribute name="len" type="xs:string" use="optional" fixed="0,5000"/>
+                                 <xs:attribute name="node_visibility" type="xs:string" use="optional" fixed="1"/>
+                                 <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+                              </xs:extension>
+                           </xs:simpleContent>
+                        </xs:complexType>
+                     </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="alias" type="xs:string" use="optional" fixed="ANNOTAZIONI"/>
+                  <xs:attribute name="hiddenInView" type="xs:string" use="optional" fixed="false"/>
+               </xs:complexType>
+            </xs:element>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+</xs:schema>
+<!--normativa#EVE#4.01#ICCD0#Eventi culturali#1##false#false#CM/ADP#null#null#false-->
